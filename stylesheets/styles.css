@@ -12,8 +12,22 @@ html {
   max-width: 960px;
 }
 
-.about-me-header {
-  /*max-width: 700px;*/
+.top-padded
+{
+  padding-top: 3rem;
+}
+
+
+.hidden-heart:hover
+{
+cursor: default;
+text-decoration: none;
+color:red;
+}
+
+.footer
+{
+  background-color: #f5f5f5;
 }
 
 .card-deck .card {
