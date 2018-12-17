@@ -14,9 +14,7 @@ html {
 
 .top-padded
 {
-  /*padding-top: 3rem;*/
-  margin-top: -70px;
-   padding-top: 70px;
+  padding-top: 4rem;
 }
 
 .hidden-heart:hover
