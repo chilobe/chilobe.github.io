@@ -12,6 +12,12 @@ html {
   max-width: 960px;
 }
 
+.img-thumbnail
+{
+  max-width: 60%;
+  max-height: 60%;
+}
+
 .top-padded
 {
   padding-top: 4rem;
