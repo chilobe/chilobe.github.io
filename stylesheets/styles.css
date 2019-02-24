@@ -8,6 +8,15 @@ html {
   }
 }
 
+.card
+{
+   transition: transform 133ms;
+}
+.card:hover
+{
+    transform: scale(1.1);
+}
+
 .container {
   max-width: 960px;
 }
