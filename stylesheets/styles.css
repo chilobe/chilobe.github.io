@@ -19,6 +19,10 @@ color:#d7d2ca;
  color:#04e0cb;
 }
 
+.horizontal_list_item
+{
+  display:inline-block;
+}
 
 
 .card
