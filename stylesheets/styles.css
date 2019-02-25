@@ -8,10 +8,29 @@ html {
   }
 }
 
+.dark-theme body
+{
+background-color: #191919;
+color:#d7d2ca;
+}
+
+.dark-theme a
+{
+ color:#04e0cb;
+}
+
+
+
 .card
 {
    transition: transform 133ms ease-in-out;
 }
+
+.dark-theme .card
+{
+    background-color: #323136;
+}
+
 .card:hover
 {
     transform: scale(1.1);
@@ -25,7 +44,7 @@ html {
 {
   max-width: 40%;
   max-height: 40%;
-   transition: transform 133ms ease-in-out;
+  transition: transform 133ms ease-in-out;
 }
 
 .img-thumbnail:hover
