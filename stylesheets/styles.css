@@ -24,6 +24,10 @@ color:#d7d2ca;
   display:inline-block;
 }
 
+.theme_toggle
+{
+  display: inline-block;
+}
 
 .card
 {
