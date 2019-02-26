@@ -52,10 +52,10 @@
   <!-- About me-->
   <main>
     <div class="container-fluid theme_toggle position-fixed">
-      <button type="button"  class="btn btn-primary float-right">
+      <button type="button"  class="btn btn-primary float-right" data-button-role="theme-toggle">
         <ul class="list-unstyled">
           <li class="horizontal_list_item" ><i class="material-icons md-48">wb_sunny</i></li>
-          <li class="horizontal_list_item"><i class="material-icons md-48">toggle_off</i></li>
+          <li class="horizontal_list_item"><i class="material-icons md-48" data-toggle-role="theme-toggle-switch">toggle_off</i></li>
           <li class="horizontal_list_item"><i class="material-icons md-48">brightness_2</i>
         </ul>
       </button>
@@ -255,6 +255,9 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+  <!-- local scripts -->
+  <script src="scripts/button.js" charset="utf-8"></script>
+  <script src="scripts/main.js" charset="utf-8"></script>
   <script>
     $(document).ready(function() {
       $('body').bootstrapMaterialDesign();
