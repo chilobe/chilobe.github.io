@@ -30,6 +30,10 @@ background-color: #0ab1a1;
   border-bottom-color: gray;
 }
 
+body
+{
+  overflow-x:hidden;
+}
 .btn.btn-primary:hover, .btn.btn-primary:focus
 {
    background-color: transparent;
