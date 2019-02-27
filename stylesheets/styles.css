@@ -14,10 +14,20 @@ background-color: #191919;
 color:#d7d2ca;
 }
 
-.dark-theme a
+.dark-theme a, .dark-theme .nav-link, .dark-theme [data-button-role="theme-toggle"].btn
 {
- color:#04e0cb;
+  color:#04e0cb;
 }
+
+.dark-theme .btn.btn-primary.bmd-btn-fab
+{
+background-color: #0ab1a1;
+}
+
+/*.dark-theme i
+{
+  color:#04e0cb;
+}*/
 
 .horizontal_list_item
 {
@@ -73,11 +83,6 @@ color:#d7d2ca;
 cursor: default;
 text-decoration: none;
 color:red;
-}
-
-.footer
-{
-  background-color: #f5f5f5;
 }
 
 .card-deck .card {

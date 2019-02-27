@@ -13,7 +13,7 @@
   themeToggleButton.addClickHandler(function(buttonElement) {
     var themeToggleSwitch = $(buttonElement).find("i[data-toggle-role='theme-toggle-switch']");
     var navElement = document.getElementsByTagName('nav')[0];
-    
+
     if ((themeToggleSwitch.text()) === ('toggle_off')) {
       //dark mode on...
       themeToggleSwitch.text('toggle_on');
