@@ -16,7 +16,7 @@
   }
 
   Button.prototype.addClickHandler = function(fn) {
-    console.log('Setting click handler for button');
+    console.log('Setting click handler for button' + $(this.$buttonElement).text());
     this.$buttonElement.on('click', function(event) {
       event.preventDefault();
       console.log('button clicked!');
