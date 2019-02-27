@@ -14,7 +14,7 @@
       throw new Error('Could not find the element with selector: ' + selector);
     }
   }
-  
+
   Button.prototype.addClickHandler = function(fn) {
     console.log('Setting click handler for button');
     this.$buttonElement.on('click', function(event) {
