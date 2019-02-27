@@ -10,10 +10,9 @@ html {
 
 .dark-theme body
 {
-background-color: #191919;
 background-color: black;
-
 color:#d7d2ca;
+
 }
 
 .dark-theme a, .dark-theme .nav-link, .dark-theme [data-button-role="theme-toggle"].btn
@@ -75,12 +74,6 @@ background-color: #0ab1a1;
 {
   max-width: 40%;
   max-height: 40%;
-  transition: transform 133ms ease-in-out;
-}
-
-.img-thumbnail:hover
-{
-  transform: scale(1.03);
 }
 
 .top-padded
@@ -103,3 +96,16 @@ color:red;
 .border-bottom { border-bottom: 1px solid #e5e5e5; }
 
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+
+.foo
+{
+/*  color: pink;
+  background-color: red;
+  margin-bottom: 10px;*/
+  margin-bottom: 10px;
+  border-style: solid;
+  border-color: #bbbbbb;
+   border-width: 1px;
+   text-decoration: none;
+}
