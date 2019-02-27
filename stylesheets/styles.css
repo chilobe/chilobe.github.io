@@ -11,6 +11,8 @@ html {
 .dark-theme body
 {
 background-color: #191919;
+background-color: black;
+
 color:#d7d2ca;
 }
 
@@ -22,6 +24,11 @@ color:#d7d2ca;
 .dark-theme .btn.btn-primary.bmd-btn-fab
 {
 background-color: #0ab1a1;
+}
+
+.dark-theme .card-header
+{
+  border-bottom-color: gray;
 }
 
 .btn.btn-primary:hover, .btn.btn-primary:focus
@@ -52,6 +59,7 @@ background-color: #0ab1a1;
 .dark-theme .card
 {
     background-color: #323136;
+    background-color: #212121;
 }
 
 .card:hover
