@@ -24,10 +24,12 @@ color:#d7d2ca;
 background-color: #0ab1a1;
 }
 
-/*.dark-theme i
+.btn.btn-primary:hover, .btn.btn-primary:focus
 {
-  color:#04e0cb;
-}*/
+   background-color: transparent;
+   border:none;
+   border-color: transparent;
+}
 
 .horizontal_list_item
 {
@@ -70,7 +72,7 @@ background-color: #0ab1a1;
 
 .img-thumbnail:hover
 {
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 
 .top-padded
