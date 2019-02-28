@@ -1,7 +1,8 @@
+/* eslint-disable require-jsdoc */
 (function(window) {
   'use strict';
-  var App = window.App || {};
-  var $ = window.jQuery;
+  const App = window.App || {};
+  const $ = window.jQuery;
 
   function Button(selector) {
     if (!selector) {
@@ -16,12 +17,14 @@
   }
 
   Button.prototype.addClickHandler = function(fn) {
-    console.log('Setting click handler for button' + $(this.$buttonElement).text());
     this.$buttonElement.on('click', function(event) {
       event.preventDefault();
-      console.log('button clicked!');
-      fn(this);
+      fn();
     });
+  };
+
+  Button.prototype.getButtonElement = function() {
+    return this.$buttonElement;
   };
 
   App.Button = Button;

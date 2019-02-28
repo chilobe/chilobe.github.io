@@ -1,11 +1,12 @@
+/* eslint-disable require-jsdoc */
 (function(window) {
   'use strict';
-  var App = window.App || {};
-  var $ = window.jQuery;
+  const App = window.App || {};
 
-  var DARK_THEME_CLASS = 'dark-theme';
-  var NAV_BAR_DARK_BACKGROUND = 'bg-dark';
-  var NAV_BAR_LIGHT_BACKGROUND = 'bg-light';
+
+  const DARK_THEME_CLASS = 'dark-theme';
+  const NAV_BAR_DARK_BACKGROUND = 'bg-dark';
+  const NAV_BAR_LIGHT_BACKGROUND = 'bg-light';
 
 
   function ThemeManager(selector) {
@@ -13,17 +14,23 @@
   }
 
   ThemeManager.prototype.enableDarkTheme = function() {
+    console.log('hello');
     console.log('dark-theme enabled.');
+    console.log(this.navElement);
     document.documentElement.classList.add(DARK_THEME_CLASS);
-    this.navElement.classList.remove(NAV_BAR_LIGHT_BACKGROUND);
-    this.navElement.classList.add(NAV_BAR_DARK_BACKGROUND);
+    if (typeof this.navElement !== 'undefined') {
+      this.navElement.classList.remove(NAV_BAR_LIGHT_BACKGROUND);
+      this.navElement.classList.add(NAV_BAR_DARK_BACKGROUND);
+    }
   };
 
   ThemeManager.prototype.enableLightTheme = function() {
     console.log('light-theme enabled.');
     document.documentElement.classList.remove(DARK_THEME_CLASS);
-    this.navElement.classList.remove(NAV_BAR_DARK_BACKGROUND);
-    this.navElement.classList.add(NAV_BAR_LIGHT_BACKGROUND);
+    if (typeof this.navElement !== 'undefined') {
+      this.navElement.classList.remove(NAV_BAR_DARK_BACKGROUND);
+      this.navElement.classList.add(NAV_BAR_LIGHT_BACKGROUND);
+    }
   };
 
   App.ThemeManager = ThemeManager;

@@ -1,47 +1,46 @@
+/* eslint-disable require-jsdoc */
 (function(window) {
   'use strict';
-  var App = window.App || {};
-  var $ = window.jQuery;
+  const App = window.App || {};
+  const $ = window.jQuery;
+  const COOKIE_WEBSITE_THEME = 'theme';
+  const COOKIE_POLICY_ACCEPTED = 'accept_cookies';
 
-  function ThemeButtonHandler(themeTogglebutton, cookieJar,themeManager) {
+  function ThemeButtonHandler(themeTogglebutton, cookieJar, themeManager) {
     if (!themeTogglebutton) {
       throw new Error('no button provided');
     }
 
+    this.themeTogglebutton = themeTogglebutton;
 
-    //this.themeTogglebutton = themeTogglebutton;
-    //this.cookieJar = cookieJar;
+    this.themeToggleSwitch = $(this.themeTogglebutton.getButtonElement())
+        .find('i[data-toggle-role="theme-toggle-switch"]');
 
-
-
-    themeToggleButton.addClickHandler(function(buttonElement) {
-  var themeToggleSwitch = $(buttonElement).find("i[data-toggle-role='theme-toggle-switch']");
-  var navElement = document.getElementsByTagName('nav')[0];
-
-  if ((themeToggleSwitch.text()) === ('toggle_off')) {
-    //dark mode on...
-    themeToggleSwitch.text('toggle_on');
-    themeManager.enableDarkTheme();
-    cookieJar.setCookie(COOKIE_WEBSITE_THEME,'dark','1');
-
-    /*document.documentElement.classList.add(DARK_THEME_CLASS);
-    navElement.classList.remove(NAV_BAR_LIGHT_BACKGROUND);
-    navElement.classList.add(NAV_BAR_DARK_BACKGROUND);*/
-  } else {
-    //dark mode off...
-    themeToggleSwitch.text('toggle_off');
-    themeManager.enableLightTheme();
-    cookieJar.setCookie(COOKIE_WEBSITE_THEME,'light','1');
-    /*document.documentElement.classList.remove(DARK_THEME_CLASS);
-    navElement.classList.remove(NAV_BAR_DARK_BACKGROUND);
-    navElement.classList.add(NAV_BAR_LIGHT_BACKGROUND);*/
-  }
-});
+    themeTogglebutton.addClickHandler(function() {
+      if ((this.themeToggleSwitch.text()) === ('toggle_off')) {
+        // dark mode on...
+        this.themeToggleSwitch.text('toggle_on');
+        themeManager.enableDarkTheme();
+        if (cookieJar.getCookie(COOKIE_POLICY_ACCEPTED)==='yes') {
+          cookieJar.setCookie(COOKIE_WEBSITE_THEME, 'dark', '1');
+        }
+      } else {
+        // dark mode off...
+        this.themeToggleSwitch.text('toggle_off');
+        themeManager.enableLightTheme();
+        if (cookieJar.getCookie(COOKIE_POLICY_ACCEPTED)==='yes') {
+          cookieJar.setCookie(COOKIE_WEBSITE_THEME, 'light', '1');
+        }
+      }
+    }.bind(this));
   }
 
-  ThemeButtonHandler.prototype.setSwitchState = function(state)
-  {
-
+  ThemeButtonHandler.prototype.setSwitchState = function(state) {
+    if (state ==='on') {
+      this.themeToggleSwitch.text('toggle_on');
+    } else {
+      this.themeToggleSwitch.text('toggle_off');
+    }
   };
 
   App.ThemeButtonHandler = ThemeButtonHandler;

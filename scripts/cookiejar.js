@@ -4,7 +4,7 @@
   var $ = window.jQuery;
 
   function CookieJar() {
-    console.log('cookie jar created!');
+  
   }
 
   CookieJar.prototype.setCookie = function(cname, cvalue, exdays) {
