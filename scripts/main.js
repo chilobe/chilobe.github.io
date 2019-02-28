@@ -7,17 +7,23 @@
   var NAV_BAR_DARK_BACKGROUND = 'bg-dark';
   var NAV_BAR_LIGHT_BACKGROUND = 'bg-light';
   var COOKIE_POLICY_ACCEPTED = 'accept_cookies';
+  var COOKIE_WEBSITE_THEME = 'theme';
+  var cookiesEnabled = 'false';
 
   var App = window.App;
   var CookieJar = App.CookieJar;
   var Button = App.Button;
-
+  var ThemeButtonHandler = App.ThemeButtonHandler;
+  var ThemeManager = App.ThemeManager;
 
   var themeToggleButton = new Button(THEME_TOGGLE_BUTTON_SELECTOR);
+  var themeButtonHandler = new ThemeButtonHandler();
 
   var cookieJar = new CookieJar();
 
+  var themeManager = new ThemeManager();
 
+    var themeButtonHandler = new ThemeButtonHandler(themeToggleButton, cookieJar,themeManager);
 
   /*Check if cookies are enabled*/
 
@@ -25,7 +31,12 @@
   console.log($cookieAcceptancePopUp);
   if(cookieJar.getCookie(COOKIE_POLICY_ACCEPTED)==='yes')
   {
+    var cookiesEnabled = 'true';
     console.log('cookes accepted!');
+    if(cookieJar.getCookie(COOKIE_WEBSITE_THEME)==='dark')
+    {
+      themeManager.enableDarkTheme();
+    }
   }
   else
   {
@@ -38,24 +49,25 @@
     });
   }
 
-  themeToggleButton.addClickHandler(function(buttonElement) {
+  /*themeToggleButton.addClickHandler(function(buttonElement) {
     var themeToggleSwitch = $(buttonElement).find("i[data-toggle-role='theme-toggle-switch']");
     var navElement = document.getElementsByTagName('nav')[0];
 
     if ((themeToggleSwitch.text()) === ('toggle_off')) {
       //dark mode on...
       themeToggleSwitch.text('toggle_on');
-      document.documentElement.classList.add(DARK_THEME_CLASS);
-      navElement.classList.remove(NAV_BAR_LIGHT_BACKGROUND);
-      navElement.classList.add(NAV_BAR_DARK_BACKGROUND);
+      themeManager.enableDarkTheme();
+      cookieJar.setCookie(COOKIE_WEBSITE_THEME,'dark','1');
+
+
     } else {
       //dark mode off...
       themeToggleSwitch.text('toggle_off');
-      document.documentElement.classList.remove(DARK_THEME_CLASS);
-      navElement.classList.remove(NAV_BAR_DARK_BACKGROUND);
-      navElement.classList.add(NAV_BAR_LIGHT_BACKGROUND);
+      themeManager.enableLightTheme();
+      cookieJar.setCookie(COOKIE_WEBSITE_THEME,'light','1');
+
     }
-  });
+  });*/
 
 
 
