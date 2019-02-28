@@ -21,7 +21,7 @@
 
   /*Check if cookies are enabled*/
 
-  var $cookieAcceptancePopUp = $("<div class='card box-shadow cookie-policy fixed-bottom container'><div class='card-body'><span>Cookies help us deliver our Services. By using our services or clicking I agree, you agree to our use of cookies.&nbsp </span><a href='#'>Learn More</a>&nbsp&nbsp <button type='button' class='btn btn-raised btn-primary' data-button-role='cookie-policy-agree'>I AGREE</button></div></div>")
+  var $cookieAcceptancePopUp = $("<div class='card box-shadow cookie-policy fixed-bottom container'><div class='card-body'><span>Cookies help us deliver our Services. By using our services or clicking I agree, you agree to our use of cookies.&nbsp </span><a href='privacypolicy.html'>Learn More</a>&nbsp&nbsp <button type='button' class='btn btn-raised btn-primary' data-button-role='cookie-policy-agree'>I AGREE</button></div></div>")
   console.log($cookieAcceptancePopUp);
   if(cookieJar.getCookie(COOKIE_POLICY_ACCEPTED)==='yes')
   {
