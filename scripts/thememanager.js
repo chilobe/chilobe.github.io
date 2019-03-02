@@ -14,9 +14,7 @@
   }
 
   ThemeManager.prototype.enableDarkTheme = function() {
-    console.log('hello');
-    console.log('dark-theme enabled.');
-    console.log(this.navElement);
+    // console.log('dark-theme enabled.');
     document.documentElement.classList.add(DARK_THEME_CLASS);
     if (typeof this.navElement !== 'undefined') {
       this.navElement.classList.remove(NAV_BAR_LIGHT_BACKGROUND);
@@ -25,7 +23,7 @@
   };
 
   ThemeManager.prototype.enableLightTheme = function() {
-    console.log('light-theme enabled.');
+    // console.log('light-theme enabled.');
     document.documentElement.classList.remove(DARK_THEME_CLASS);
     if (typeof this.navElement !== 'undefined') {
       this.navElement.classList.remove(NAV_BAR_DARK_BACKGROUND);

@@ -34,7 +34,7 @@
   if (cookieJar.getCookie(COOKIE_POLICY_ACCEPTED)==='yes') {
     // console.log('cookies accepted!');
     if (cookieJar.getCookie(COOKIE_WEBSITE_THEME)==='dark') {
-      console.log('trying to enable dark theme...');
+    // console.log('trying to enable dark theme...');
       themeButtonHandler.setSwitchState('on');
       themeManager.enableDarkTheme();
     }
