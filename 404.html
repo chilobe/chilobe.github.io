@@ -23,7 +23,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
 
   <!-- Material Design for Bootstrap CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+    integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 
   <!-- Local StyleSheets-->
   <link rel="stylesheet" href="stylesheets/styles.css">
@@ -33,17 +35,24 @@
 
 <body>
   <main>
+
+    <!--Go home icon-->
+    <div class="container position-fixed float-left">
+      <a href="./index.html">🏠</a>
+    </div>
+
     <!-- dark theme toggle-->
-  <div class="container-fluid theme-toggle position-fixed">
-    <button type="button" class="btn btn-primary float-right" data-button-role="theme-toggle">
-      <ul class="list-unstyled">
-        <li class="horizontal_list_item"><i class="material-icons md-48">wb_sunny</i></li>
-        <li class="horizontal_list_item"><i class="material-icons md-48" data-toggle-role="theme-toggle-switch">toggle_off</i></li>
-        <li class="horizontal_list_item"><i class="material-icons md-48">brightness_2</i>
-      </ul>
-    </button>
-  </div>
-    <div class="container text-center pt-md-5" >
+    <div class="container-fluid theme-toggle position-fixed">
+      <button type="button" class="btn btn-primary float-right" data-button-role="theme-toggle">
+        <ul class="list-unstyled">
+          <li class="horizontal_list_item"><i class="material-icons md-48">wb_sunny</i></li>
+          <li class="horizontal_list_item"><i class="material-icons md-48"
+              data-toggle-role="theme-toggle-switch">toggle_off</i></li>
+          <li class="horizontal_list_item"><i class="material-icons md-48">brightness_2</i>
+        </ul>
+      </button>
+    </div>
+    <div class="container text-center pt-md-5">
       <h1>404 PAGE NOT FOUND 😔</h1>
       <img src="img/confused_swan.jpg" class="img-thumbnail" alt="a confused_swan">
       <h4>The swan could not find the page you are looking for...</h4>
@@ -53,9 +62,15 @@
   </main>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+    integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+    integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+    crossorigin="anonymous"></script>
 
   <!-- local scripts -->
   <script src="scripts/button.js" charset="utf-8"></script>
@@ -64,7 +79,7 @@
   <script src="scripts/themebuttonhandler.js" charset="utf-8"></script>
   <script src="scripts/main.js" charset="utf-8"></script>
   <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
       $('body').bootstrapMaterialDesign();
     });
   </script>
