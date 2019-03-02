@@ -32,7 +32,7 @@
       'btn-primary" data-button-role="cookie-policy-agree">'+
       'I AGREE</button></div></div>');
   if (cookieJar.getCookie(COOKIE_POLICY_ACCEPTED)==='yes') {
-    console.log('cookes accepted!');
+    // console.log('cookies accepted!');
     if (cookieJar.getCookie(COOKIE_WEBSITE_THEME)==='dark') {
       console.log('trying to enable dark theme...');
       themeButtonHandler.setSwitchState('on');

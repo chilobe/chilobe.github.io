@@ -7,8 +7,8 @@
   }
 
   CookieJar.prototype.setCookie = function(cname, cvalue, exdays) {
-    console.log('setting cookie "' + cname + '" value="' +
-        cvalue + '" exdays="' + exdays + '"');
+    /* console.log('setting cookie "' + cname + '" value="' +
+        cvalue + '" exdays="' + exdays + '"');*/
     const d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     const expires = 'expires=' + d.toUTCString();
@@ -16,8 +16,8 @@
   };
 
   CookieJar.prototype.getCookie = function(cname) {
-    console.log('getting cookie "' + cname + '"');
-    const name = c.name + '=';
+    // console.log('getting cookie "' + cname + '"');
+    const name = cname + '=';
     const decodedCookie = decodeURIComponent(document.cookie);
     const ca = decodedCookie.split(';');
     for (let i = 0; i < ca.length; i++) {
@@ -33,7 +33,7 @@
   };
 
   CookieJar.prototype.getCookie = function(cname) {
-    console.log('getting cookie "' + cname + '"');
+    // console.log('getting cookie "' + cname + '"');
     const name = cname + '=';
     const decodedCookie = decodeURIComponent(document.cookie);
     const ca = decodedCookie.split(';');
